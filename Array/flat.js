@@ -22,6 +22,7 @@ Array.prototype.myFlat1 = function(){
       deep = args !== Infinity ? args >>> 0 : Infinity,
       result = [];
 
+  // IIFE + 遞迴 
   (function _(arr, deep){
     arr.forEach(function(item){
       if(Array.isArray(item) && deep > 0){
@@ -42,6 +43,7 @@ Array.prototype.myFlat2 = function(){
       deep = args !== Infinity ? args >>> 0 : Infinity,
       result = [];
 
+  // IIFE + 遞迴 
   (function _(arr, deep){
     for(item of arr){
       if(Array.isArray(item) && deep > 0){
@@ -64,8 +66,6 @@ Array.prototype.myFlat3 = function(){
 
   while(stack.length){
     const popItem = stack.pop();
-
-    console.log(`第${ index }次`, popItem);
 
     if(Array.isArray(popItem)){
       stack.push(...popItem);
