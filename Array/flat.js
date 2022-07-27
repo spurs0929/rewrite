@@ -1,4 +1,4 @@
-// 扁平化方法重寫
+// Array.prototype.flat方法重寫
 
 // 1. reduce + concat + isArray + 遞迴 
 Array.prototype.myFlat = function(){
