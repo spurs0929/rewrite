@@ -16,7 +16,7 @@
 //   return initialValue;
 // }
 
-Array.prototype.myReduce = function (...args: any) {
+Array.prototype.myReduce = function (...args) {
   // your code here
   
   // args[1]: initial value
